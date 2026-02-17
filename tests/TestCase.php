@@ -5,7 +5,6 @@ namespace Iperamuna\PrettyRoutesExtended\Tests;
 use Iperamuna\PrettyRoutesExtended\PrettyRoutesServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Sushi\SushiServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,7 +12,6 @@ class TestCase extends Orchestra
     {
         return [
             LivewireServiceProvider::class,
-            SushiServiceProvider::class,
             PrettyRoutesServiceProvider::class,
         ];
     }
