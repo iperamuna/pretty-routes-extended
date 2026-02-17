@@ -19,5 +19,10 @@ class TestCase extends Orchestra
     public function getEnvironmentSetUp($app)
     {
         config()->set('app.key', '6rE9EB9l2icPq9D669Y9CUv9Bc2vxS2y');
+
+        // Register some test routes for Sushi to pick up on boot
+        $app['router']->get('/test-search-route', fn() => 'test')->name('test.search');
+        $app['router']->get('/admin/users', fn() => 'admin')->name('admin.users');
+        $app['router']->get('/api/data', fn() => 'api')->name('api.data');
     }
 }
