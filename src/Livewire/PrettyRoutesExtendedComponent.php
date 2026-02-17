@@ -5,7 +5,7 @@ namespace Iperamuna\PrettyRoutesExtended\Livewire;
 use Iperamuna\PrettyRoutesExtended\Models\Route as RouteModel;
 use Livewire\Component;
 
-class PrettyRoutesComponent extends Component
+class PrettyRoutesExtendedComponent extends Component
 {
     public string $search = '';
 
@@ -38,7 +38,7 @@ class PrettyRoutesComponent extends Component
 
         $routes = $query->get();
 
-        return view('pretty-routes-extended::livewire.pretty-routes', [
+        return view('pretty-routes-extended::livewire.pretty-routes-extended', [
             'routes' => $routes,
             'totalCount' => RouteModel::count(),
             'filterOptions' => $this->generateFilterOptions(),

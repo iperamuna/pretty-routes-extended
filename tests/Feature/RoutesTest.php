@@ -1,6 +1,6 @@
 <?php
 
-use Iperamuna\PrettyRoutesExtended\Livewire\PrettyRoutesComponent;
+use Iperamuna\PrettyRoutesExtended\Livewire\PrettyRoutesExtendedComponent;
 use Livewire\Livewire;
 
 it('can access the routes page', function () {
@@ -15,13 +15,13 @@ it('renders the livewire component', function () {
 });
 
 it('can search for routes', function () {
-    Livewire::test(PrettyRoutesComponent::class)
+    Livewire::test(PrettyRoutesExtendedComponent::class)
         ->set('search', 'test-search-route')
         ->assertSee('test-search-route');
 });
 
 it('can filter routes by prefix', function () {
-    Livewire::test(PrettyRoutesComponent::class)
+    Livewire::test(PrettyRoutesExtendedComponent::class)
         ->set('filter', 'admin')
         ->assertSee('admin/users')
         ->assertDontSee('api/data');

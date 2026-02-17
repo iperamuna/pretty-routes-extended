@@ -4,10 +4,10 @@ namespace Iperamuna\PrettyRoutesExtended;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Iperamuna\PrettyRoutesExtended\Livewire\PrettyRoutesComponent;
+use Iperamuna\PrettyRoutesExtended\Livewire\PrettyRoutesExtendedComponent;
 use Livewire\Livewire;
 
-class PrettyRoutesServiceProvider extends ServiceProvider
+class PrettyRoutesExtendedServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
@@ -25,7 +25,7 @@ class PrettyRoutesServiceProvider extends ServiceProvider
             __DIR__.'/../resources/views' => resource_path('views/vendor/pretty-routes-extended'),
         ], 'pretty-routes-extended-views');
 
-        Livewire::component('pretty-routes-extended', PrettyRoutesComponent::class);
+        Livewire::component('pretty-routes-extended', PrettyRoutesExtendedComponent::class);
 
         Route::get(config('pretty-routes-extended.url'), function () {
             return view('pretty-routes-extended::routes');
