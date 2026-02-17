@@ -1,0 +1,51 @@
+{
+    "name": "iperamuna/pretty-routes-extended",
+    "description": "Visualise your routes in pretty format with Livewire filters and search.",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "routes",
+        "pretty-routes",
+        "livewire"
+    ],
+    "authors": [
+        {
+            "name": "Indunil Peramuna",
+            "email": "iperamuna@example.com",
+            "homepage": "https://iperamuna.online"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "livewire/livewire": "^3.0|^4.0",
+        "calebporzio/sushi": "^2.5"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.0|^3.0",
+        "pestphp/pest-plugin-laravel": "^2.0|^3.0",
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "laravel/pint": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iperamuna\\PrettyRoutesExtended\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Iperamuna\\PrettyRoutesExtended\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Iperamuna\\PrettyRoutesExtended\\PrettyRoutesServiceProvider"
+            ]
+        }
+    }
+}
