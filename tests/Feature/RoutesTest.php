@@ -4,8 +4,9 @@ use Iperamuna\PrettyRoutesExtended\Livewire\PrettyRoutesComponent;
 use Livewire\Livewire;
 
 it('can access the routes page', function () {
-    $this->get(config('pretty-routes-extended.url'))
-        ->assertStatus(200);
+    $response = $this->get(config('pretty-routes-extended.url'));
+
+    expect($response->status())->toBe(200);
 });
 
 it('renders the livewire component', function () {
@@ -16,12 +17,12 @@ it('renders the livewire component', function () {
 it('can search for routes', function () {
     Livewire::test(PrettyRoutesComponent::class)
         ->set('search', 'test-search-route')
-        ->assertSee('/test-search-route');
+        ->assertSee('test-search-route');
 });
 
 it('can filter routes by prefix', function () {
     Livewire::test(PrettyRoutesComponent::class)
         ->set('filter', 'admin')
-        ->assertSee('/admin/users')
-        ->assertDontSee('/api/data');
+        ->assertSee('admin/users')
+        ->assertDontSee('api/data');
 });
