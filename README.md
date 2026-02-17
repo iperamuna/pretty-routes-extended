@@ -5,6 +5,8 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/iperamuna/pretty-routes-extended.svg?style=flat-square)](https://packagist.org/packages/iperamuna/pretty-routes-extended)
 [![License](https://img.shields.io/packagist/l/iperamuna/pretty-routes-extended.svg?style=flat-square)](https://github.com/iperamuna/pretty-routes-extended/blob/main/LICENSE)
 
+![Pretty Routes Extended Banner](art/banner.png)
+
 Visualise your Laravel routes in a beautiful, interactive, and searchable interface. Built with Livewire and Tailwind CSS for a premium experience.
 
 This package is heavily inspired by and builds upon the excellent work of [garygreen/pretty-routes](https://github.com/garygreen/pretty-routes).
