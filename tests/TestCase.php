@@ -24,8 +24,8 @@ class TestCase extends Orchestra
     protected function defineRoutes($router)
     {
         // Register some test routes for Sushi to pick up
-        $router->get('/test-search-route', fn() => 'test')->name('test.search');
-        $router->get('/admin/users', fn() => 'admin')->name('admin.users');
-        $router->get('/api/data', fn() => 'api')->name('api.data');
+        $router->get('/test-search-route', fn () => 'test')->name('test.search');
+        $router->get('/admin/users', fn () => 'admin')->name('admin.users');
+        $router->get('/api/data', fn () => 'api')->name('api.data');
     }
 }

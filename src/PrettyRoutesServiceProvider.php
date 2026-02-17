@@ -15,14 +15,14 @@ class PrettyRoutesServiceProvider extends ServiceProvider
             return;
         }
 
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'pretty-routes-extended');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'pretty-routes-extended');
 
         $this->publishes([
-            __DIR__ . '/../config/pretty-routes-extended.php' => config_path('pretty-routes-extended.php'),
+            __DIR__.'/../config/pretty-routes-extended.php' => config_path('pretty-routes-extended.php'),
         ], 'pretty-routes-extended-config');
 
         $this->publishes([
-            __DIR__ . '/../resources/views' => resource_path('views/vendor/pretty-routes-extended'),
+            __DIR__.'/../resources/views' => resource_path('views/vendor/pretty-routes-extended'),
         ], 'pretty-routes-extended-views');
 
         Livewire::component('pretty-routes-extended', PrettyRoutesComponent::class);
@@ -37,7 +37,7 @@ class PrettyRoutesServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/pretty-routes-extended.php',
+            __DIR__.'/../config/pretty-routes-extended.php',
             'pretty-routes-extended'
         );
     }
