@@ -56,10 +56,10 @@ Once installed, visit the `/routes` endpoint (or your custom configured URL) in 
 composer test
 ```
 
-## Credits
+## ❤️ Credits
 
-- [Indunil Peramuna](https://github.com/iperamuna)
-- [Gary Green](https://github.com/garygreen) (Original Inspiration)
+- Developed with ❤️ by [Indunil Peramuna](https://iperamuna.online)
+- Heavily inspired by [garygreen/pretty-routes](https://github.com/garygreen/pretty-routes)
 - [All Contributors](../../contributors)
 
 ## License
