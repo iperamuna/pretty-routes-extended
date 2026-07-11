@@ -27,6 +27,12 @@ class PrettyRoutesExtendedServiceProvider extends ServiceProvider
 
         Livewire::component('pretty-routes-extended', PrettyRoutesExtendedComponent::class);
 
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                Console\TuiDemoCommand::class,
+            ]);
+        }
+
         Route::get(config('pretty-routes-extended.url'), function () {
             return view('pretty-routes-extended::routes');
         })

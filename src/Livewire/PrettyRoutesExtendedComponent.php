@@ -2,6 +2,7 @@
 
 namespace Iperamuna\PrettyRoutesExtended\Livewire;
 
+use Illuminate\View\View;
 use Iperamuna\PrettyRoutesExtended\Models\Route as RouteModel;
 use Livewire\Component;
 
@@ -24,7 +25,7 @@ class PrettyRoutesExtendedComponent extends Component
         }
     }
 
-    public function render(): \Illuminate\View\View
+    public function render(): View
     {
         $query = RouteModel::query();
 
